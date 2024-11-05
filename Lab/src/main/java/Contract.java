@@ -13,4 +13,6 @@
     public int BuildTenantID();
     public int BuildRentAmount();
     public Contract SignContract();
+    
+    
 }

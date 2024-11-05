@@ -1,17 +1,18 @@
 
-public class Permanent implements Contract{
+public class Permanent implements Contract {
+
     private int ContractID;
-    private int RentalAmount;
+    private int RentAmount;
     private int TenantID;
     private int PropertyID;
 
-    public Permanent(int ContractID, int RentalAmount, int TenantID, int PropertyID) {
+    public Permanent(int ContractID, int RentAmount, int TenantID, int PropertyID) {
         this.ContractID = ContractID;
-        this.RentalAmount = RentalAmount;
+        this.RentAmount = RentAmount;
         this.TenantID = TenantID;
         this.PropertyID = PropertyID;
     }
-    
+
     @Override
     public int BuildContractID() {
         return this.ContractID;
@@ -19,23 +20,23 @@ public class Permanent implements Contract{
 
     @Override
     public int BuildPropertyID() {
-       return this.PropertyID;
+        return this.PropertyID;
     }
 
     @Override
     public int BuildTenantID() {
-       return this.TenantID;
+        return this.TenantID;
     }
 
     @Override
     public int BuildRentAmount() {
-        return this.RentalAmount;
+        return this.RentAmount;
     }
 
     @Override
-    public Contract SignContract() {
-       Contract contract = new Permanent(1,2,3,4);
-       return contract;
+     public Contract SignContract() {
+        System.out.println("Signing a permanent contract.");
+        return this;
     }
 
     public int getContractID() {
@@ -47,11 +48,11 @@ public class Permanent implements Contract{
     }
 
     public int getRentalAmount() {
-        return RentalAmount;
+        return RentAmount;
     }
 
-    public void setRentalAmount(int RentalAmount) {
-        this.RentalAmount = RentalAmount;
+    public void setRentalAmount(int RentAmount) {
+        this.RentAmount = RentAmount;
     }
 
     public int getTenantID() {
@@ -69,8 +70,9 @@ public class Permanent implements Contract{
     public void setPropertyID(int PropertyID) {
         this.PropertyID = PropertyID;
     }
-   
-    
-    
-    
+
+    public String toString() {
+        return "LongTerm{" + "ContractID=" + ContractID + ", PropertyID=" + PropertyID + ", TenantID=" + TenantID + ", RentAmount=" + RentAmount + '}';
+    }
+
 }

@@ -71,10 +71,10 @@ public class LongTerm implements Contract{
         return this.RentAmount;
     }
 
-    @Override
-    public Contract SignContract() {
-        Contract contract = new LongTerm(this.getContractID(), this.getPropertyID(), this.getContractID(), this.getTenantID());
-        return contract;
+   @Override
+     public Contract SignContract() {
+        System.out.println("Signing a long-term contract.");
+        return this;
     }
 
     @Override

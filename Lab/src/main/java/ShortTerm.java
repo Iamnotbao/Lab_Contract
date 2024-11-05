@@ -73,11 +73,12 @@ public class ShortTerm implements Contract {
         return this.RentAmount;
     }
 
-    @Override
-    public Contract SignContract() {
-        Contract contract = new ShortTerm(this.getContractID(), this.getPropertyID(), this.getContractID(), this.getTenantID());
-        return contract;
+  @Override
+     public Contract SignContract() {
+        System.out.println("Signing a short-term contract.");
+        return this;
     }
+
 
     @Override
     public String toString() {

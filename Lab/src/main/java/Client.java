@@ -15,23 +15,24 @@ public class Client {
         int PropertyID = sc.nextInt();
         System.out.println("Type your contract options:");
         String type = sc.next();
-
+        
+        Contract contract;
         switch (type) {
             case "long-term":
-                LongTerm longTerm = new LongTerm(ContractID, PropertyID, TenantID, RentAmount);
-                System.out.println(longTerm);
+                contract = new LongTerm(ContractID, PropertyID, TenantID, RentAmount);
                 break;
                   case "short-term":
-                ShortTerm shortTerm = new ShortTerm(ContractID, PropertyID, TenantID, RentAmount);
-                System.out.println(shortTerm);
+                 contract = new ShortTerm(ContractID, PropertyID, TenantID, RentAmount);
                 break;
                   case "permanent":
-                Permanent permanent = new Permanent(ContractID, PropertyID, TenantID, RentAmount);
-                System.out.println(permanent);
+                 contract = new Permanent(ContractID, PropertyID, TenantID, RentAmount);
                 break;
             default:
                 System.err.println("Wrong input");
+                return;
         }
+        contract.SignContract();
+        System.out.println(contract);
 
     }
 }
