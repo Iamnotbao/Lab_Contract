@@ -15,7 +15,7 @@ public class Client {
         int PropertyID = sc.nextInt();
         System.out.println("Type your contract options:");
         String type = sc.next();
-        
+        sc.close();
         Contract contract;
         switch (type) {
             case "long-term":

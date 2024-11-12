@@ -1,4 +1,3 @@
-import java.nio.charset.StandardCharsets;
 import java.util.Base64;
 
 import javax.crypto.Cipher;
@@ -25,15 +24,20 @@ public class lab5 {
          return new String(decryptoBytes);
     }
     public static void main(String[] args){
-        try{
-            SecretKey key=generateKey();
-            String message=" i am a Customer";
-            String encryptoMessage =encrypt(message, key);
-            System.out.println("encrypted : "+encryptoMessage+"\n");
-           String decryptMessage= decrypt(encryptoMessage, key);
-            System.out.println("decrypted : "+decryptMessage+"\n");
-        }catch(Exception exception){
-            System.out.println(exception.toString());
-        }
+        // try{
+        //     SecretKey key=generateKey();
+        //     String message=" i am a Customer";
+        //     String encryptoMessage =encrypt(message, key);
+        //     System.out.println("encrypted : "+encryptoMessage+"\n");
+        //    String decryptMessage= decrypt(encryptoMessage, key);
+        //     System.out.println("decrypted : "+decryptMessage+"\n");
+        // }catch(Exception exception){
+        //     System.out.println(exception.toString());
+        // }
+        Maintenance_Requests requests=new Medium_Priority_Request();
+        requests.setExpire();
+        requests.setPriority();
+        requests.setStatus();
+        System.out.println(requests.toString());
     }
 }
