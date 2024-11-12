@@ -1,28 +1,30 @@
+package Maintenance_Request;
+
 import java.time.LocalDate;
 
-public class Medium_Priority_Request extends Maintenance_Requests{
+public class Low_Priority_Request extends Maintenance_Requests{
     private String priority;
     private String status;
     private String expire;
 
     @Override
-    void setPriority() {
+    public void setPriority() {
        this.priority="Ignore";
     }
 
     @Override
-    void setStatus() {
+    public void setStatus() {
         this.status="Done";
     }
 
     @Override
-    void setExpire() {
+    public void setExpire() {
         LocalDate date=LocalDate.now().plusMonths(1);
         this.expire= date.toString();
     }
 
     @Override
-    void processRequest() {
+    public void processRequest() {
         System.out.println("Request denied");
     }
 

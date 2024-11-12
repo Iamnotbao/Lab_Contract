@@ -1,4 +1,5 @@
 import java.util.Base64;
+import Maintenance_Request.*;
 
 import javax.crypto.Cipher;
 import javax.crypto.KeyGenerator;
@@ -35,9 +36,7 @@ public class lab5 {
         //     System.out.println(exception.toString());
         // }
         Maintenance_Requests requests=new Medium_Priority_Request();
-        requests.setExpire();
-        requests.setPriority();
-        requests.setStatus();
+        
         System.out.println(requests.toString());
     }
 }

@@ -1,3 +1,5 @@
+package Maintenance_Request;
+
 import java.time.LocalDate;
 
 public class High_Priority_Request extends Maintenance_Requests{
@@ -5,23 +7,23 @@ public class High_Priority_Request extends Maintenance_Requests{
     private String status;
     private String expire;
     @Override
-    void setPriority() {
+    public void setPriority() {
         // TODO Auto-generated method stub
         this.priority="Emergency";
     }
 
     @Override
-    void setStatus() {
+    public void setStatus() {
        this.status="Accept";
     }
 
     @Override
-    void setExpire() {
+    public void setExpire() {
       this.expire=LocalDate.now().toString();
     }
 
     @Override
-    void processRequest() {
+    public void processRequest() {
        System.out.println("“Emergency request, our\r\n" + //
                       "Administer will contact you immediately !”");
     }
