@@ -1,9 +1,10 @@
 import java.util.Base64;
-import Maintenance_Request.*;
 
 import javax.crypto.Cipher;
 import javax.crypto.KeyGenerator;
 import javax.crypto.SecretKey;
+
+import MaintenancePackage.*;
 
 public class lab5 {
     public static SecretKey generateKey() throws Exception{
@@ -35,8 +36,10 @@ public class lab5 {
         // }catch(Exception exception){
         //     System.out.println(exception.toString());
         // }
-        Maintenance_Requests requests=new Medium_Priority_Request();
-        
+        Maintenance_Requests requests=new Low_Priority_Request();
+        requests.setPriority();
+        requests.setExpire();
+        requests.setStatus();
         System.out.println(requests.toString());
     }
 }

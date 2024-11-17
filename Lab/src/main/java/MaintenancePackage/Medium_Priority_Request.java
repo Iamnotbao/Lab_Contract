@@ -9,9 +9,6 @@ public class Medium_Priority_Request extends Maintenance_Requests{
     @Override
     public void setPriority() {
       this.priority="Medium";
-      
-      
-
     }
 
     @Override
@@ -25,9 +22,15 @@ public class Medium_Priority_Request extends Maintenance_Requests{
     }
 
     @Override
-    void processRequest() {
+    public void processRequest() {
        System.out.println(": Print out/Sent the following message “Request accept, estimated\r\n" + //
                       "completion date is "+expire);
     }
+
+    @Override
+    public String toString() {
+        return "Medium_Priority_Request [priority=" + priority + ", status=" + status + ", expire=" + expire + "]";
+    }
     
+
 }

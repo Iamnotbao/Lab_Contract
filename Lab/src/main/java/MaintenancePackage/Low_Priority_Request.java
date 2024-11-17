@@ -1,4 +1,4 @@
-package Maintenance_Request;
+package MaintenancePackage;
 
 import java.time.LocalDate;
 

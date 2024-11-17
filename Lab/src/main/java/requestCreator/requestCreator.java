@@ -1,5 +1,5 @@
 package requestCreator;
-import Maintenance_Request.*;
+import MaintenancePackage.*;
 public interface requestCreator {
-    public Maintenance_Request createRequest();
+    public Maintenance_Requests createRequest();
 }
